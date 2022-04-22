@@ -34,3 +34,9 @@ Please make sure you run classes in following order.
 1) Client1.py
 2) Client2_Average.py 
 3) Client3_Print.py
+
+Download: </br>
+For Git Hub:
+`https://github.com/CK213/SwitchDin-Test.git` </br>
+For Docker:
+`docker pull cherrenk1/switchdin-test:latest`
