@@ -1,0 +1,36 @@
+##SwitchDin Python Test
+This is a Python test offered by SwitchDin and can only be use for interview purpose. This test has been completed by Cheuk Hang Ku (Cherren) on 22nd April,2022 </br>
+
+Functional requirements:
+- Write a random number generator in python that publishes a random number between 1 and 100 to an MQTT topic in a message broker
+on a random interval between 1 and 30 seconds. Recommend to use the paho MQTT python client library. http://www.eclipse.org/paho
+/clients/python/
+- Stand up a simple MQTT message broker. Recommend mosquitto or RabbitMQ.
+- A second python application that subscribes to the above message, reads the random number from the broker, and calculates one
+minute, 5 minute, and 30 minutes averages. These should then be sent back to the broker on a different topic.
+- A third python application that subscribes to the statistics calculated in point 3, and prints these out in a pretty tabular layout (on the
+console is fine).
+
+Non-functional requirements: 
+- Environment to be configured with Ansible, including infrastructure and application deployment.
+- Use docker to deploy the message broker.
+- Entire system to be published in github or bitbucket.
+- Application running on AWS Free Tier server. Please provide access to attached public key and advise Public IP of VM on which the
+application is deployed.
+
+Classes in this program: </br>
+As the nature of how Client works on MQTT broker, there are 3 main classes in this program.
+- Client1.py
+- Client2_Average.py
+- Client3_Print.py
+
+Please refer to line 1 - 4  in each file for individual descriptions.
+
+MQTT Broker: </br>
+This program is designed to run on Mosquitto MQTT Broker.
+
+How to run: </br>
+Please make sure you run classes in following order.
+1) Client1.py
+2) Client2_Average.py 
+3) Client3_Print.py
